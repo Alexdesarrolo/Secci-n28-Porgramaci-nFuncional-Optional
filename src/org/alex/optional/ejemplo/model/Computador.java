@@ -1,9 +1,12 @@
 package org.alex.optional.ejemplo.model;
 
+import java.util.Optional;
+
 public class Computador {
 
     private String nombre;
     private String modelo;
+    private Procesador procesador;
 
     public Computador() {
     }
@@ -27,6 +30,14 @@ public class Computador {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    public Optional<Procesador> getProcesador() {
+        return Optional.ofNullable(procesador);
+    }
+
+    public void setProcesador(Procesador procesador) {
+        this.procesador = procesador;
     }
 
     @Override
